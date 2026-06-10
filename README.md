@@ -1,5 +1,6 @@
 # ggtimer (v1.2.51)
 A simple, general-purpose timer.
+<img width="1350" height="591" alt="image" src="https://github.com/user-attachments/assets/6aac2ded-b9c9-4b43-bd82-1acd3eb734d7" />
 
 ---
 
