@@ -1,0 +1,129 @@
+#overlay {
+    position: absolute;
+    z-index: 5;
+    display: grid;
+    place-items: end start;
+    width: 100vw;
+    height: 100vh;
+    align-items: end;
+    box-sizing: border-box;
+    padding: 8px;
+    font-family: "IBM Plex Sans";
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+#overlay p {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#sOverlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: #0d143b70;
+    backdrop-filter: blur(4px);
+    display: grid;
+    place-items: center;
+}
+
+#sMenu {
+    background-color: #d1e6eb;
+    width: min(600px, 100%);
+    box-sizing: border-box;
+    padding: 32px;
+    padding-top: 0;
+    border-radius: 0.8em;
+    height: min(80%, 400px);
+    z-index: 4;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #90a2d6 transparent;
+}
+
+#sMenu h2 {
+    display: flex;
+    justify-content: space-between;
+    font-family: "IBM Plex Sans";
+    font-size: 2em;
+    border-bottom: #90a2d6 2px solid;
+    padding-bottom: 4px;
+    padding-top: 32px;
+    margin-bottom: 8px;
+    position: fixed;
+    width: min(528px, 100%);
+    background-color: #d1e6eb;
+}
+
+#sMenu .material-symbols-rounded {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+#closeShortcuts {
+    color: #7886b3;
+    cursor: pointer;
+}
+
+#sMenu p#top {
+    margin-top: 6em;
+    font-style: italic;
+    font-family: "IBM Plex Sans";
+    opacity: 0.5;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+}
+
+#sMenu table {
+    font-family: "IBM Plex Sans";
+    width: 100%;
+}
+
+#sMenu table td {
+    padding: 32px;
+}
+
+#sMenu tr:not(:last-child) td {
+    border-bottom: 2px solid #bacee6;
+}
+
+#sMenu tr td:first-child {
+    border-right: 2px solid #bacee6;
+}
+
+#sMenu kbd {
+    padding: 10px 16px;
+    border-radius: 0.4em;
+    box-shadow: 0 4px #48435c;
+    background-color: #2d2b36;
+    color: #bdc7d8;
+    transition: transform 0.08s, box-shadow 0.08s, color 0.7s;
+    font-size: 1em;
+    font-family: "IBM Plex Sans";
+    display: flex;
+    justify-self: end;
+    cursor: pointer;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+#sMenu kbd .material-symbols-rounded {
+    font-size: 1.3em;
+    transform: translateY(0.08em);
+}
+
+#sMenu kbd:hover {
+    color: white;
+}
+
+#sMenu kbd:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #48435c;
+}

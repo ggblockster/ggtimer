@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL@20..48,100..700,0..1');
+
+* {
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+ul.nav {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    font-family: "IBM Plex Sans";
+    background-color: #9fbaca;
+    padding: 12px;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+ul.nav img {
+    height: 2em;
+}
+
+ul.nav li a {
+    text-decoration: none;
+    vertical-align: -0.5em;
+    color: black;
+    cursor: default;
+}
+
+ul.nav li a #title {
+    vertical-align: 0.5em;
+    cursor: pointer;
+}
+
+ul.nav #block2 {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+}
+
+#scbtn {
+    cursor: pointer;
+    padding: 10px 16px;
+    border-radius: 0.8em;
+    corner-shape: squircle;
+    transition: 0.3s;
+}
+
+#scbtn:hover {
+    background-color: #191b3310;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px)
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}

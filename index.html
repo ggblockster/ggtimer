@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ggTimer</title>
+
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/timer.css">
+    <link rel="stylesheet" href="/css/advanced.css">
+    <link rel="stylesheet" href="/css/overlay.css">
+
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="overlay">
+        <p>
+            <span>Made by ggblockster</span>
+            <span>
+                ggTimer - <span id="version">v0.0.0</span>
+            </span>
+        </p>
+    </div>
+    <div id="sOverlay" style="display: none;">
+        <div id="sMenu">
+            <h2>
+                <span>
+                    <i class="material-symbols-rounded">action_key</i>
+                    Keyboard Shortcuts
+                </span>
+                <i class="material-symbols-rounded" id="closeShortcuts">close</i>
+            </h2>
+            <p id="top">*When a shortcut mentions more than one key, it means that any one of those keys can complete the action.</p>
+            <table>
+                <tr class="border">
+                    <td>
+                        <kbd title="Spacebar">&ensp;&emsp;Space&emsp;&ensp;</kbd>
+                    </td>
+                    <td>Start / Pause the timer</td>
+                </tr>
+                <tr>
+                    <td>
+                        <kbd title="Backspace">
+                            <i class="material-symbols-rounded">arrow_left_alt</i>
+                             Backspace
+                        </kbd>
+                        <p>&ensp;</p>
+                        <kbd title="Delete">
+                            <i class="material-symbols-rounded">delete</i>
+                             Delete
+                        </kbd>
+                    </td>
+                    <td>Resets the timer. In advanced mode, this will also log the time you just got.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <kbd title="O">O</kbd>
+                    </td>
+                    <td>Open / close the <i>advanced options</i> menu</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <ul class="nav">
+        <div id="block1">
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="/img/icon.png" alt="">
+                    <span id="title" title="- - - - - - ggTimer v1.2 - - - - - - -
+  A simple, general-purpose timer">ggTimer</span>
+                </a>
+            </li>
+        </div>
+        <div id="block2">
+            <li>
+                <a href="javascript:void(0)" title="Toggle advanced mode">
+                    <input type="checkbox" id="advc">
+                    <span id="at">Advanced Mode</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" id="scbtn" title="Show built-in shortcuts">
+                    Shortcuts
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)"></a>
+            </li>
+        </div>
+    </ul>
+    <div class="flex">
+        <div id="timePanel">
+            <div id="timebox">
+                <h1 id="time">00:00.00</h1>
+                <div id="btnrow">
+                    <button id="start" title="Start / Pause the timer">Start</button>
+                    <button id="reset" title="Reset the timer. If in advanced mode,
+it will also log the recorded time.">Reset</button>
+                </div>
+                <p id="--version">&emsp;</p>
+            </div>
+        </div>
+        <div id="advancedPanel">
+            <h2>
+                <span>Advanced Options</span>
+                <i class="material-symbols-rounded" id="closeAdv">close</i>
+            </h2>
+            <div class="div"></div>
+            <h3>Recorded Times</h3>
+            <p style="
+            font-style: italic;
+            font-size: 0.85em;
+            margin-left: 2px;">Click a time to copy it to your clipboard.</p>
+            <ul id="timelist">
+            </ul>
+            <div id="tbtnr">
+                <button id="clearHistory" title="Deletes all times from the 'recorded times' 
+             list. Cannot be recovered.">
+                    <i class="material-symbols-rounded">delete</i>
+                    Clear
+                </button>
+                <button id="exportBtn" title="Export the data into a .csv (Comma Separated 
+                          Values) file.">
+                    <i class="material-symbols-rounded">file_export</i>
+                    Export
+                </button>
+            </div>
+            <p style="
+            font-style: italic;
+            font-size: 0.85em;
+            margin-left: 2px;">Tip: Reset a time to add it to the recorded times.</p>
+        </div>
+    </div>
+</body>
+<script src="/js/timer.js"></script>
+<script src="/js/advanced.js"></script>
+<script src="/js/version.js"></script>
+<script src="/js/shortcuts.js"></script>
+</html>
