@@ -5,8 +5,8 @@ A simple, general-purpose timer.
 
 ## How to use *ggTimer*:
 To access an already hosted version of *ggTimer*, go to [this website](https://ggtimer.pages.dev/).
-Click the **Start** button to start / pause the timer &emsp; you can also do this with <kbd>SPACE</kbd>.
-You can reset the timer with the **Reset** button &emsp; the shortcut for it is <kbd>Backspace</kbd> or <kbd>Delete</kbd>.
+Click the **Start** button to start / pause the timer — you can also do this with <kbd>SPACE</kbd>.
+You can reset the timer with the **Reset** button — the shortcut for it is <kbd>Backspace</kbd> or <kbd>Delete</kbd>.
 
 ---
 
