@@ -6,6 +6,10 @@
     margin: 0;
 }
 
+html {
+    scrollbar-width: none;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -33,6 +37,8 @@ ul.nav li a {
     vertical-align: -0.5em;
     color: black;
     cursor: default;
+    text-wrap: none;
+    white-space: nowrap;
 }
 
 ul.nav li a #title {
@@ -42,11 +48,16 @@ ul.nav li a #title {
 
 ul.nav #block2 {
     margin-left: auto;
+    padding-left: 24px;
     display: flex;
     gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #7f98b4 transparent;
+    overflow-y: hidden;
 }
 
-#scbtn {
+#scbtn, ul.nav li a.link {
     cursor: pointer;
     padding: 10px 16px;
     border-radius: 0.8em;
@@ -54,7 +65,7 @@ ul.nav #block2 {
     transition: 0.3s;
 }
 
-#scbtn:hover {
+#scbtn:hover, ul.nav li a.link:hover {
     background-color: #191b3310;
 }
 
