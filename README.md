@@ -1,4 +1,4 @@
-# ggtimer (v1.2.5)
+# ggtimer (v1.2.51)
 A simple, general-purpose timer.
 
 ---
