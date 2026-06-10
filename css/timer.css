@@ -27,6 +27,11 @@
     -webkit-user-select: none;
 }
 
+#btnrow button .material-symbols-rounded {
+    font-variation-settings: 'FILL' 1;
+    vertical-align: -0.3em;
+}
+
 #start {
     border: #2e5e3e 1px solid;
     background-color: #3f9455;
