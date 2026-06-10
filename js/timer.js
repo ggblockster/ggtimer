@@ -1,5 +1,7 @@
 const timeText = document.getElementById("time");
 const startBtn = document.getElementById("start");
+const startBtnText = document.getElementById("st");
+const startBtnIcon = document.getElementById("stIcon");
 const resetBtn = document.getElementById("reset");
 
 let ms = 0;
@@ -18,7 +20,8 @@ function reset() {
     m = 0;
     ms = 0;
     startBtn.classList.remove("active");
-    startBtn.textContent = "Start";
+    startBtnText.textContent = "Start";
+    startBtnIcon.textContent = "play_arrow";
 }
 
 document.addEventListener('keydown', function (event) {
@@ -28,10 +31,12 @@ document.addEventListener('keydown', function (event) {
         running = !running;
         if (running) {
             startBtn.classList.add("active");
-            startBtn.textContent = "Pause";
+            startBtnText.textContent = "Pause";
+            startBtnIcon.textContent = "pause";
         } else {
             startBtn.classList.remove("active");
-            startBtn.textContent = "Start";
+            startBtnText.textContent = "Start";
+            startBtnIcon.textContent = "play_arrow";
         }
     } else if ((event.code === 'Backspace') || (event.code === 'Delete')) {
         event.preventDefault();
@@ -45,11 +50,13 @@ startBtn.addEventListener("click", () => {
     if (running) {
         console.log('active');
         startBtn.classList.add("active");
-        startBtn.textContent = "Pause";
+        startBtnText.textContent = "Pause";
+        startBtnIcon.textContent = "pause";
     } else {
         console.log('inactive');
         startBtn.classList.remove("active");
-        startBtn.textContent = "Start";
+        startBtnText.textContent = "Start";
+        startBtnIcon.textContent = "play_arrow";
     }
 });
 
