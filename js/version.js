@@ -1,4 +1,4 @@
-const version = 'v1.2.51';
+const version = 'v1.2.6';
 const vtext = document.getElementById("version");
 
 vtext.textContent = version;
