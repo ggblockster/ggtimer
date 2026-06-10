@@ -32,7 +32,7 @@
 
 #sMenu {
     background-color: #d1e6eb;
-    width: min(600px, 80vw);
+    width: min(600px, 100%);
     box-sizing: border-box;
     padding: 32px;
     padding-top: 0;
@@ -42,6 +42,7 @@
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #90a2d6 transparent;
+    font-family: "IBM Plex Sans";
 }
 
 #sMenu h2 {
@@ -55,7 +56,12 @@
     margin-bottom: 8px;
     position: fixed;
     width: min(528px, 100%);
-    background-color: #d1e6eb;
+    background-color: #d1e6ebff;
+}
+
+#sMenu h3 {
+    font-size: 1.5em;
+    margin-bottom: 8px;
 }
 
 #sMenu .material-symbols-rounded {
@@ -126,4 +132,25 @@
 #sMenu kbd:active {
     transform: translateY(2px);
     box-shadow: 0 2px #48435c;
+}
+
+.keyflex {
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.keyflex p {
+    font-weight: bold;
+    font-family: "IBM Plex Sans";
+    transform: translateY(0.7em);
+    color: #48435c;
+}
+
+#sMenu .div {
+    width: 90%;
+    height: 2px;
+    background-color: #bacee6;
+    margin: 20px auto;
 }
