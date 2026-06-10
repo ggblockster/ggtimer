@@ -104,7 +104,7 @@ function saveTime() {
 resetBtn.addEventListener("click", saveTime);
 
 document.addEventListener("keydown", function (e) {
-    if (e.code === "Backspace" || e.code === "Delete") {
+    if (e.code === "Backspace") {
         saveTime();
     }
 });
@@ -146,3 +146,17 @@ exportBtn.addEventListener("click", () => {
         }
     }
 });
+
+document.addEventListener("keydown", function(u) {
+    if (u.code === 'Delete' && advancedPanel.matches(":hover")) {
+        clearTimes();
+    } else if (event.altKey && u.code === 'KeyP' && advancedPanel.matches(":hover")) {
+        if (confirm("Export times to \"times.csv\"?")) {
+            if (times.length < 1) {
+                alert("Cannot export an empty list.")
+            } else {
+                exportTimes();
+            }
+        }
+    }
+})
