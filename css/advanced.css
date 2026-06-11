@@ -33,7 +33,7 @@
     margin-bottom: 8px;
 }
 
-ul#timelist {
+ul.al {
     margin-top: 8px;
     background-color: #9fbaca;
     border-radius: 0.8em;
@@ -51,7 +51,7 @@ ul#timelist {
     scrollbar-width: thin;
 }
 
-ul#timelist li {
+ul.al li {
     background-color: #bad6dd;
     padding: 8px;
     border-radius: 0.6em;
@@ -59,7 +59,7 @@ ul#timelist li {
     transition: 0.3s;
 }
 
-ul#timelist li:hover {
+ul.al li:hover {
     background-color: oklch(from #bad6dd calc(l + 0.03) c h);
     transform: scale(1.01);
 }
