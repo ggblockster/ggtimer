@@ -62,6 +62,7 @@ function displayTimes() {
             li.classList.add("copyable");
 
             ulTime.appendChild(li);
+            getAverage();
         });
 }
 
@@ -81,6 +82,7 @@ function clearTimes() {
     if (confirm("Are you sure you want to delete all of your saved times?\nThis cannot be undone.")) {
         times = [];
         localStorage.removeItem("times");
+        getAverage();
         displayTimes();
     }
 }
@@ -160,3 +162,39 @@ document.addEventListener("keydown", function(u) {
         }
     }
 })
+
+function timeToSeconds(timeStr) {
+    const match = timeStr.match(/^(\d+):(\d{2})\.(\d{2})$/);
+    if (!match) throw new Error(`Invalid time format: ${timeStr}`);
+    const minutes = parseInt(match[1], 10);
+    const seconds = parseInt(match[2], 10);
+    const hundredths = parseInt(match[3], 10);
+    return minutes * 60 + seconds + hundredths / 100;
+}
+
+function secondsToTime(totalSeconds) {
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = Math.floor(totalSeconds % 60);
+    const hundredths = Math.round((totalSeconds - Math.floor(totalSeconds)) * 100);
+    return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(hundredths).padStart(2, '0')}`;
+}
+
+function averageStopwatchTimes(times) {
+    if (!Array.isArray(times) || times.length === 0) {
+        throw new Error("Input must be a non-empty array of time strings.");
+    }
+
+    const totalSeconds = times.reduce((sum, t) => sum + timeToSeconds(t), 0);
+    const avgSeconds = totalSeconds / times.length;
+    return secondsToTime(avgSeconds);
+}
+
+async function getAverage() {
+    if (times.length == 0) {
+        document.getElementById("average").textContent =  'No data available';
+    } else {
+        document.getElementById("average").textContent =  averageStopwatchTimes(times);
+    }
+}
+
+getAverage();
